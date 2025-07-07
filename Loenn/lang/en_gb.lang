@@ -1,0 +1,32 @@
+# Custom ascending stars
+style.effects.CaeruleaHelper/CustomAscendingStars.name=Custom Ascending Stars
+style.effects.CaeruleaHelper/CustomAscendingStars.attribute.speedx=Speed X
+style.effects.CaeruleaHelper/CustomAscendingStars.attribute.speedy=Speed Y
+style.effects.CaeruleaHelper/CustomAscendingStars.description.count=The amount of stars
+style.effects.CaeruleaHelper/CustomAscendingStars.description.color=The color of stars
+style.effects.CaeruleaHelper/CustomAscendingStars.description.path=Path of the textures
+
+# Noise circle area
+style.effects.CaeruleaHelper/NoiseCircleArea.name=Noise Circle Area
+style.effects.CaeruleaHelper/NoiseCircleArea.attribute.centerx=Center X
+style.effects.CaeruleaHelper/NoiseCircleArea.attribute.centery=Center Y
+
+# Static space block
+entities.CaeruleaHelper/StaticSpaceBlock.placements.name.static_space_block=Static Space Block
+entities.CaeruleaHelper/StaticSpaceBlock.attributes.description.tiletype=Determines the visual appearance of the wall.
+
+# Disable super trigger
+triggers.CaeruleaHelper/DisableSuperTrigger.placements.name.trigger=Disable Super/Hyper Trigger
+triggers.CaeruleaHelper/DisableSuperTrigger.attributes.description.enable=Whether enable or disable
+triggers.CaeruleaHelper/DisableSuperTrigger.attributes.description.revertOnLeave=Revert on leave
+
+# Always fail super trigger
+triggers.CaeruleaHelper/AlwaysFailSuperTrigger.placements.name.trigger=Always Fail Super/Hyper Trigger
+triggers.CaeruleaHelper/AlwaysFailSuperTrigger.attributes.description.enable=Whether enable or disable
+triggers.CaeruleaHelper/AlwaysFailSuperTrigger.attributes.description.revertOnLeave=Revert on leave
+triggers.CaeruleaHelper/AlwaysFailSuperTrigger.attributes.description.allowReverse=Allow reversed fail supers/hypers
+
+# No dash speed reset trigger
+triggers.CaeruleaHelper/NoDashSpeedResetTrigger.placements.name.trigger=No Dash Speed Reset Trigger
+triggers.CaeruleaHelper/NoDashSpeedResetTrigger.attributes.description.enable=Whether enable or disable
+triggers.CaeruleaHelper/NoDashSpeedResetTrigger.attributes.description.revertOnLeave=Revert on leave
