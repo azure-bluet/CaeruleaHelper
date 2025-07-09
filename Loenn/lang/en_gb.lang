@@ -2,9 +2,14 @@
 style.effects.CaeruleaHelper/CustomAscendingStars.name=Custom Ascending Stars
 style.effects.CaeruleaHelper/CustomAscendingStars.attribute.speedx=Speed X
 style.effects.CaeruleaHelper/CustomAscendingStars.attribute.speedy=Speed Y
+style.effects.CaeruleaHelper/CustomAscendingStars.attribute.scrollx=Scroll X
+style.effects.CaeruleaHelper/CustomAscendingStars.attribute.scrolly=Scroll Y
 style.effects.CaeruleaHelper/CustomAscendingStars.description.count=The amount of stars
 style.effects.CaeruleaHelper/CustomAscendingStars.description.color=The color of stars
 style.effects.CaeruleaHelper/CustomAscendingStars.description.path=Path of the textures
+
+# Pure color
+style.effects.CaeruleaHelper/PureColor.name=Pure Color
 
 # Noise circle area
 style.effects.CaeruleaHelper/NoiseCircleArea.name=Noise Circle Area

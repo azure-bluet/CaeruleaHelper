@@ -55,10 +55,12 @@ public class CustomAscendingStars : Backdrop
     }
     public override void Render(Scene scene)
     {
+        Vector2 vcc = (scene as Level).Camera.Position.Floor();
+        Vector2 scr = (Position - vcc * Scroll).Floor();
         // Render stars
         for (int i = 0; i < Stars.Length; i++)
         {
-            Vector2 pos = Mod(Stars[i].position, (scene as Level).Camera.Viewport);
+            Vector2 pos = Mod(Stars[i].position + scr, (scene as Level).Camera.Viewport);
             Stars[i].Texture.DrawCentered(pos, StarColor);
         }
     }

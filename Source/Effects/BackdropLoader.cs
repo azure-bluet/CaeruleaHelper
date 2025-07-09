@@ -26,7 +26,7 @@ public class BackdropLoader
                 child.AttrFloat("speedy")
             );
         }
-        else if (child.Name.Equals("CaeruleaHelper/NoiseCircleArea", StringComparison.OrdinalIgnoreCase))
+        if (child.Name.Equals("CaeruleaHelper/NoiseCircleArea", StringComparison.OrdinalIgnoreCase))
         {
             return new NoiseCircleArea(
                 new Vector2(
@@ -36,6 +36,10 @@ public class BackdropLoader
                 child.AttrFloat("radius", 20),
                 Calc.HexToColor(child.Attr("color", "ffffff"))
             );
+        }
+        if (child.Name.Equals("CaeruleaHelper/PureColor", StringComparison.OrdinalIgnoreCase))
+        {
+            return new PureColor(Calc.HexToColor(child.Attr("color", "ffffff")));
         }
         return null;
     }

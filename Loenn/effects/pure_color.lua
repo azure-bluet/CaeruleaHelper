@@ -1,8 +1,8 @@
 local effect = {}
 
-effect.name = "CaeruleaHelper/CustomAscendingStars"
+effect.name = "CaeruleaHelper/PureColor"
 effect.canBackground = true
-effect.canForeground = true
+effect.canForeground = true -- um why are you considering this
 
 effect.fieldInformation = {
     color = {
@@ -12,13 +12,7 @@ effect.fieldInformation = {
 }
 
 effect.defaultData = {
-    path = "particles/caerulea/stars/",
     color = "ffffff",
-    count = "96",
-    speedx = 0.0,
-    speedy = 0.0,
-    scrollx = 0.0,
-    scrolly = 0.0
 }
 
 return effect
