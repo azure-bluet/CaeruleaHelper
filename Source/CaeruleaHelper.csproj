@@ -26,12 +26,6 @@
         <PackageReference Include="CelesteMod.Publicizer" Version="*" CelesteAssembly="$(CelestePrefix)\Celeste.dll" />
         <Reference Include="$(CelestePrefix)\MMHOOK_Celeste.dll" Private="false" />
         <Reference Include="$(CelestePrefix)\FNA.dll" Private="false" />
-        <Reference Include="CollabUtils2">
-          <HintPath>..\..\dev\CollabUtils2.dll</HintPath>
-        </Reference>
-        <Reference Include="ExtendedVariantMode">
-          <HintPath>..\..\dev\ExtendedVariantMode.dll</HintPath>
-        </Reference>
     </ItemGroup>
 
 	<ItemGroup>

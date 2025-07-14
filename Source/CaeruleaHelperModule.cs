@@ -34,6 +34,7 @@ public class CaeruleaHelperModule : EverestModule {
         // TODO: apply any hooks that should always be active
         SuperJumpHook.Load();
         DashSpeedHook.Load();
+        BerryHook.Load();
         BackdropLoader.Load();
     }
 
@@ -42,6 +43,7 @@ public class CaeruleaHelperModule : EverestModule {
         // TODO: unapply any hooks applied in Load()
         SuperJumpHook.Unload();
         DashSpeedHook.Unload();
+        BerryHook.Unload();
         BackdropLoader.Unload();
     }
 }
