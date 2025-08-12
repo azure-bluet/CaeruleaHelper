@@ -5,6 +5,7 @@ using Monocle;
 
 namespace Celeste.Mod.CaeruleaHelper.Entities;
 
+[Tracked]
 [CustomEntity("CaeruleaHelper/BronzeBerry")]
 [RegisterStrawberry(tracked: false, blocksCollection: true)]
 public class BronzeBerry : Strawberry

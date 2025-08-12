@@ -36,6 +36,7 @@ public class CaeruleaHelperModule : EverestModule {
         DashSpeedHook.Load();
         BerryHook.Load();
         BackdropLoader.Load();
+        JumpSwitchFlag.Load();
     }
 
     public override void Unload()
@@ -45,5 +46,6 @@ public class CaeruleaHelperModule : EverestModule {
         DashSpeedHook.Unload();
         BerryHook.Unload();
         BackdropLoader.Unload();
+        JumpSwitchFlag.Unload();
     }
 }
