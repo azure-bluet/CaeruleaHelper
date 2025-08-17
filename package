@@ -1,1 +1,3 @@
+#!/usr/bin/bash
+rm CaeruleaHelper.zip
 zip -vr CaeruleaHelper.zip bin External Graphics Loenn everest.yaml

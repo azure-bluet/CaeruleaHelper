@@ -37,6 +37,7 @@ public class CaeruleaHelperModule : EverestModule {
         BerryHook.Load();
         BackdropLoader.Load();
         JumpSwitchFlag.Load();
+        ToggleReverseBooster.Load();
     }
 
     public override void Unload()
@@ -47,5 +48,6 @@ public class CaeruleaHelperModule : EverestModule {
         BerryHook.Unload();
         BackdropLoader.Unload();
         JumpSwitchFlag.Unload();
+        ToggleReverseBooster.Unload();
     }
 }

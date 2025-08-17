@@ -28,6 +28,13 @@ entites.CaeruleaHelper/BronzeBerry.attributes.name.ghost=Ghost bronze particle 1
 entites.CaeruleaHelper/BronzeBerry.attributes.name.altghost=Ghost bronze particle 2
 entites.CaeruleaHelper/BronzeBerry.attributes.name.ghostsprite=Ghost sprite
 
+# Toggle reverse booster
+entities.CaeruleaHelper/ToggleReverseBooster.placements.name.toggle_reverse_booster=Toggle Reverse Booster
+entites.CaeruleaHelper/ToggleReverseBooster.attributes.name.red=Red
+entities.CaeruleaHelper/ToggleReverseBooster.attributes.name.global=Global
+entities.CaeruleaHelper/ToggleReverseBooster.attributes.name.initial=Initial Value
+entities.CaeruleaHelper/ToggleReverseBooster.attributes.name.twistSprite=Twist Sprite
+
 # Disable super trigger
 triggers.CaeruleaHelper/DisableSuperTrigger.placements.name.trigger=Disable Super/Hyper Trigger
 triggers.CaeruleaHelper/DisableSuperTrigger.attributes.description.enable=Whether enable or disable
