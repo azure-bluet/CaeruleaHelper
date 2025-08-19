@@ -12,7 +12,7 @@ public class ToggleReverseBooster : Booster
     public readonly static string ToggleReverseFlag = "caeruleaHelperToggleReverseBoosterFlag";
     private readonly Sprite TwistSprite;
     private readonly string directory;
-    private readonly bool global;
+    private readonly bool global, initial;
     private bool current;
 
     public ToggleReverseBooster(EntityData data, Vector2 offset) : base(data.Position + offset, data.Bool("red"))
@@ -23,7 +23,8 @@ public class ToggleReverseBooster : Booster
         TwistSprite.Play("twist");
         TwistSprite.CenterOrigin();
         global = data.Bool("global", false);
-        current = data.Bool("initial", false);
+        initial = data.Bool("initial", false);
+        current = false;
     }
     public bool CurrentState(Level level)
     {
@@ -32,7 +33,7 @@ public class ToggleReverseBooster : Booster
     private void Use(Player player)
     {
         bool cur = CurrentState(player.SceneAs<Level>());
-        if (cur)
+        if (cur ^ initial)
         {
             player.Speed *= -1f;
             player.DashDir *= -1f;
@@ -42,7 +43,7 @@ public class ToggleReverseBooster : Booster
     }
     public override void Update()
     {
-        if (CurrentState(SceneAs<Level>())) TwistSprite.SetColor(Color.White);
+        if (CurrentState(SceneAs<Level>()) ^ initial) TwistSprite.SetColor(Color.White);
         else TwistSprite.SetColor(Color.Transparent);
         base.Update();
     }
