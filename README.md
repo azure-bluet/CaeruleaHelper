@@ -20,6 +20,8 @@ Global mode makes all the boosters toggle globally when used. Non-global mode ma
 the booster only toggles itself.
 The texture of the arrows indicators are from [GlassHelper](https://github.com/raine-storm/GlassHelper).
 
+Quarter Rotate Booster: Rotates player any degrees you want.
+
 ### Triggers
 
 Always Fail Super/Hyper Trigger: This trigger lets player perform failed supers/hypers
