@@ -9,6 +9,8 @@ toggleReverseBooster.placements = {
             red = false,
             global = false,
             initial = false,
+            toggleType = false,
+            toggleReverse = true,
             twistSprite = "objects/caerulea/revbooster/twist/twist"
         }
     }

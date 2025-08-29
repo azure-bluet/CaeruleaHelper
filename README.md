@@ -18,6 +18,13 @@ Toggle Reverse Booster: Acts like reverse boosters in Glass Helper, except it
 toggles whenever being used. There are two modes, global mode and non-global mode.
 Global mode makes all the boosters toggle globally when used. Non-global mode makes
 the booster only toggles itself.
+Options:
+ - Red: Controls whether this booster is a red booster
+ - Global: Controls whether this booster is in global mode
+ - Initial Value: Controls whether this booster is a reverse booster at the beginning
+ - Toggle Reverse: Controls whether this booster toggles reversal
+ - Toggle Type: Controls whether this booster toggles type (red or green)
+
 The texture of the arrows indicators are from [GlassHelper](https://github.com/raine-storm/GlassHelper).
 
 Quarter Rotate Booster: Rotates player any degrees you want.
