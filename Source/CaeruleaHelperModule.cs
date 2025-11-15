@@ -39,6 +39,7 @@ public class CaeruleaHelperModule : EverestModule {
         JumpSwitchFlag.Load();
         ToggleReverseBooster.Load();
         QuarterRotateBooster.Load();
+        InvisibleSpinnerController.Load();
     }
 
     public override void Unload()
@@ -51,5 +52,6 @@ public class CaeruleaHelperModule : EverestModule {
         JumpSwitchFlag.Unload();
         ToggleReverseBooster.Unload();
         QuarterRotateBooster.Unload();
+        InvisibleSpinnerController.Unload();
     }
 }

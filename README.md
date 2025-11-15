@@ -29,6 +29,10 @@ The texture of the arrows indicators are from [GlassHelper](https://github.com/r
 
 Quarter Rotate Booster: Rotates player any degrees you want.
 
+Invisible Spinner Controller: Place this so all your (vanilla) spinners in
+this room become invisible. This will (unexpectedly) affect spinners in the
+following room when they're being first loaded, so be careful.
+
 ### Triggers
 
 Always Fail Super/Hyper Trigger: This trigger lets player perform failed supers/hypers
