@@ -55,6 +55,12 @@ triggers.CaeruleaHelper/AlwaysFailSuperTrigger.attributes.description.enable=Whe
 triggers.CaeruleaHelper/AlwaysFailSuperTrigger.attributes.description.revertOnLeave=Revert on leave
 triggers.CaeruleaHelper/AlwaysFailSuperTrigger.attributes.description.allowReverse=Allow reversed fail supers/hypers
 
+
+# Always fail wallbounce trigger
+triggers.CaeruleaHelper/AlwaysFailWallbounceTrigger.placements.name.trigger=Always Fail Wallbounce Trigger
+triggers.CaeruleaHelper/AlwaysFailWallbounceTrigger.attributes.description.enable=Whether enable or disable
+triggers.CaeruleaHelper/AlwaysFailWallbounceTrigger.attributes.description.revertOnLeave=Revert on leave
+
 # No dash speed reset trigger
 triggers.CaeruleaHelper/NoDashSpeedResetTrigger.placements.name.trigger=No Dash Speed Reset Trigger
 triggers.CaeruleaHelper/NoDashSpeedResetTrigger.attributes.description.enable=Whether enable or disable

@@ -1,25 +1,32 @@
 using System;
+using System.Reflection;
 using Microsoft.Xna.Framework;
 using Mono.Cecil.Cil;
-using Monocle;
 using MonoMod.Cil;
+using MonoMod.RuntimeDetour;
 
 namespace Celeste.Mod.CaeruleaHelper.Triggers;
 
 public class SuperJumpHook
 {
+    private static Hook hook_wallsuperjump;
     // hook
     public static void Load()
     {
         On.Celeste.Player.SuperJump += SuperJump;
         IL.Celeste.Player.DashUpdate += ModifyPlayerDashIL;
         IL.Celeste.Player.RedDashUpdate += ModifyPlayerDashIL;
+        hook_wallsuperjump = new Hook(
+            typeof(Player).GetProperty("SuperWallJumpAngleCheck", BindingFlags.NonPublic | BindingFlags.Instance).GetGetMethod(true),
+            typeof(SuperJumpHook).GetMethod("SuperWallJump", BindingFlags.NonPublic | BindingFlags.Static)
+        );
     }
     public static void Unload()
     {
         On.Celeste.Player.SuperJump -= SuperJump;
         IL.Celeste.Player.DashUpdate -= ModifyPlayerDashIL;
         IL.Celeste.Player.RedDashUpdate -= ModifyPlayerDashIL;
+        hook_wallsuperjump.Dispose();
     }
     private static void ModifyPlayerDashIL(ILContext ctx)
     {
@@ -47,5 +54,12 @@ public class SuperJumpHook
             self.Jump();
         }
         else orig(self);
+    }
+    // for wall super jumps, aka wallbounces
+    private delegate bool orig_Player_SuperWallJumpAngleCheck(Player self);
+    private static bool SuperWallJump(orig_Player_SuperWallJumpAngleCheck orig, Player self)
+    {
+        if (CaeruleaHelperModule.Session.AlwaysFailWallbounce) return false;
+        else return orig(self);
     }
 }

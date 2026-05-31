@@ -39,6 +39,9 @@ Always Fail Super/Hyper Trigger: This trigger lets player perform failed supers/
 instead of normal ones. An additional option controls whether a "reverse failed super/hyper"
 (which is not a vanilla tech) can be performed.
 
+Always Fail Wallbounce Trigger: This trigger lets player always perform wall kicks instead of
+wallbounces.
+
 Bronze Collect Trigger: This trigger lets player collect all their bronze berries.
 
 Disable Super/Hyper Trigger: This trigger disables supers/hypers.
