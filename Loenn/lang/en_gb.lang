@@ -61,6 +61,19 @@ triggers.CaeruleaHelper/AlwaysFailWallbounceTrigger.placements.name.trigger=Alwa
 triggers.CaeruleaHelper/AlwaysFailWallbounceTrigger.attributes.description.enable=Whether enable or disable
 triggers.CaeruleaHelper/AlwaysFailWallbounceTrigger.attributes.description.revertOnLeave=Revert on leave
 
+# Downdash wallbounce trigger
+triggers.CaeruleaHelper/DowndashWallbounceTrigger.placements.name.trigger=Downdash Wallbounce Trigger
+triggers.CaeruleaHelper/DowndashWallbounceTrigger.attributes.description.enable=Whether enable or disable
+triggers.CaeruleaHelper/DowndashWallbounceTrigger.attributes.description.revertOnLeave=Revert on leave
+
+# Set spinner invisible trigger
+triggers.CaeruleaHelper/SetSpinnerInvisibleTrigger.placements.name.trigger=Set Spinner Invisible Trigger
+
+# Spike correction leniency trigger
+triggers.CaeruleaHelper/SpikeCorrectionLeniencyTrigger.placements.name.trigger=Downdash Wallbounce Trigger
+triggers.CaeruleaHelper/SpikeCorrectionLeniencyTrigger.attributes.description.enable=Whether enable or disable
+triggers.CaeruleaHelper/SpikeCorrectionLeniencyTrigger.attributes.description.revertOnLeave=Revert on leave
+
 # No dash speed reset trigger
 triggers.CaeruleaHelper/NoDashSpeedResetTrigger.placements.name.trigger=No Dash Speed Reset Trigger
 triggers.CaeruleaHelper/NoDashSpeedResetTrigger.attributes.description.enable=Whether enable or disable

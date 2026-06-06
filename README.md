@@ -29,9 +29,12 @@ The texture of the arrows indicators are from [GlassHelper](https://github.com/r
 
 Quarter Rotate Booster: Rotates player any degrees you want.
 
-Invisible Spinner Controller: Place this so all your (vanilla) spinners in
-this room become invisible. This will (unexpectedly) affect spinners in the
-following room when they're being first loaded, so be careful.
+### Controllers
+
+Invisible Spinner Controller: Place this so all your (vanilla) spinners in this room 
+become invisible. This will (unexpectedly) affect spinners in the following room when
+they're being first loaded, so be careful. Note: I recommend using Set Spinner Invisible
+Trigger instead.
 
 ### Triggers
 
@@ -39,8 +42,23 @@ Always Fail Super/Hyper Trigger: This trigger lets player perform failed supers/
 instead of normal ones. An additional option controls whether a "reverse failed super/hyper"
 (which is not a vanilla tech) can be performed.
 
-Always Fail Wallbounce Trigger: This trigger lets player always perform wall kicks instead of
-wallbounces.
+Always Fail Wallbounce Trigger: This trigger lets player always perform wall kicks or climb
+jumps instead of wallbounces. Note that this does not change the original 4px leniency for
+wallbounces, so to avoid wall kicking / climb jumping 4px from the wall, you need to use
+Extended Variants to change Wall Bounce Distance.
+
+Downdash Wallbounce Trigger: This trigger allows player to perform wallbounces by down
+dashing.
+
+Set Spinner Invisible Trigger: This trigger has similar effects with Invisible Spinner
+Controller. Note: This does not work when the level is being first loaded. Use the controller
+for this case.
+
+Spike Correction Leniency Trigger: This trigger adds leniency to corner correction when
+the wall has spikes on it. More specifically, if the player is dashing exactly towards
+spikes, there will be a single invincibility frame, making corner corrections stable.
+This is useful for wall bounces, air supers, etc. and is especially helpful for downdash
+corner corrections on top of spikes.
 
 Bronze Collect Trigger: This trigger lets player collect all their bronze berries.
 
