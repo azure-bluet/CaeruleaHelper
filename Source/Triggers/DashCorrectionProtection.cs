@@ -7,20 +7,27 @@ namespace Celeste.Mod.CaeruleaHelper.Triggers;
 public class DashCorrectionProtection
 {
     private static int SpikeInvincibilityCooldown;
+    private static Vector2 death = Vector2.Zero;
     public static void Load()
     {
-        Everest.Events.Player.OnBeforeUpdate += PlayerUpdate;
+        Everest.Events.Player.OnAfterUpdate += PlayerUpdate;
         IL.Celeste.Spikes.OnCollide += ModifySpikesCollideIL;
     }
     public static void Unload()
     {
-        Everest.Events.Player.OnBeforeUpdate -= PlayerUpdate;
+        Everest.Events.Player.OnAfterUpdate -= PlayerUpdate;
         IL.Celeste.Spikes.OnCollide -= ModifySpikesCollideIL;
     }
     private static void PlayerUpdate(Player player)
     {
         if (SpikeInvincibilityCooldown > 0)
         {
+            if (SpikeInvincibilityCooldown == 1
+                && player.StateMachine.State != Player.StDash
+                && player.StateMachine.State != Player.StRedDash)
+            {
+                player.Die(death);
+            }
             SpikeInvincibilityCooldown--;
         }
     }
@@ -37,7 +44,7 @@ public class DashCorrectionProtection
             cursor.EmitDelegate(CheckDeath);
         }
     }
-    private static int CheckDeath(Player player, Vector2 direction, bool LongName1, bool LongName2, Spikes spike)
+    private static bool CheckDeath(Player player, Vector2 direction, bool LongName1, bool LongName2, Spikes spike)
     {
         if (CaeruleaHelperModule.Session.SpikeCorrectionLeniency && SpikeInvincibilityCooldown % 2 == 0)
         {
@@ -61,13 +68,12 @@ public class DashCorrectionProtection
             if (player.StateMachine.State == Player.StDash && player.DashDir.Equals(dashdir))
             {
                 SpikeInvincibilityCooldown = 2;
-                return 0;
+                death = direction;
+                return false;
             }
         }
 
-        // We return an int because the original CIL contains a `pop`
-        // and im lazy to remove it lol
         player.Die(direction, LongName1, LongName2);
-        return 313;
+        return true;
     }
 }

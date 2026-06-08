@@ -70,7 +70,7 @@ triggers.CaeruleaHelper/DowndashWallbounceTrigger.attributes.description.revertO
 triggers.CaeruleaHelper/SetSpinnerInvisibleTrigger.placements.name.trigger=Set Spinner Invisible Trigger
 
 # Spike correction leniency trigger
-triggers.CaeruleaHelper/SpikeCorrectionLeniencyTrigger.placements.name.trigger=Downdash Wallbounce Trigger
+triggers.CaeruleaHelper/SpikeCorrectionLeniencyTrigger.placements.name.trigger=Spike Correction Leniency Trigger
 triggers.CaeruleaHelper/SpikeCorrectionLeniencyTrigger.attributes.description.enable=Whether enable or disable
 triggers.CaeruleaHelper/SpikeCorrectionLeniencyTrigger.attributes.description.revertOnLeave=Revert on leave
 
