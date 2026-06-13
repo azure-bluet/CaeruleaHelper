@@ -90,7 +90,11 @@ public class BackdropRenderHook
                 break;
             }
         }
-        if (tag == null) return;
+        if (tag == null)
+        {
+            backdrop.Render(scene);
+            return;
+        }
         blurs.TryGetValue(tag, out float strength);
         // We set the RT to our buffer
         renderer.EndSpritebatch();
