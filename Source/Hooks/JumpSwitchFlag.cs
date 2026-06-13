@@ -1,6 +1,6 @@
 // I don't know where to put this
 
-namespace Celeste.Mod.CaeruleaHelper.Triggers;
+namespace Celeste.Mod.CaeruleaHelper.Hooks;
 
 public class JumpSwitchFlag
 {

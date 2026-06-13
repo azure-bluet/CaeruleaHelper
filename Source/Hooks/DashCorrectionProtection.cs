@@ -2,7 +2,7 @@ using System;
 using Microsoft.Xna.Framework;
 using MonoMod.Cil;
 
-namespace Celeste.Mod.CaeruleaHelper.Triggers;
+namespace Celeste.Mod.CaeruleaHelper.Hooks;
 
 public class DashCorrectionProtection
 {
@@ -35,16 +35,39 @@ public class DashCorrectionProtection
     {
         ILCursor cursor = new(ctx);
         // For every player.Die(), we replace it with our CheckDeath()
-        while (cursor.TryGotoNext(MoveType.Before, instr => instr.MatchCallvirt<Player>("Die")))
+        while (cursor.TryGotoNext(MoveType.Before,
+            instr => instr.MatchLdcI4(0),
+            instr => instr.MatchLdcI4(1),
+            instr => instr.MatchCallvirt<Player>("Die")
+        ))
         {
-            // Someone told me not to do this. I'm sorry, but I have to.
-            // This might cause some issues, but it works fine with me (now)
-            cursor.Remove();
+            // call ShouldProtect
+            cursor.EmitDup();
             cursor.EmitLdarg0();
-            cursor.EmitDelegate(CheckDeath);
+            cursor.EmitLdarg1();
+            cursor.EmitDelegate(ShouldProtect);
+
+            // original
+            ILLabel orig = ctx.DefineLabel();
+            cursor.EmitBrtrue(orig);
+
+            // if original was skipped, we have to pop the Vector2 then Player
+            // however we can use the `pop` after orig to pop the Player
+            cursor.EmitPop();
+
+            // after the pop, goto after orig
+            ILLabel after = ctx.DefineLabel();
+            cursor.EmitBr(after);
+
+            // now the orig
+            cursor.MarkLabel(orig);
+
+            // after orig
+            cursor.TryGotoNext(MoveType.Before, instr => instr.MatchPop());
+            cursor.MarkLabel(after);
         }
     }
-    private static bool CheckDeath(Player player, Vector2 direction, bool LongName1, bool LongName2, Spikes spike)
+    private static bool ShouldProtect(Vector2 direction, Spikes spike, Player player)
     {
         if (CaeruleaHelperModule.Session.SpikeCorrectionLeniency && SpikeInvincibilityCooldown % 2 == 0)
         {
@@ -73,7 +96,6 @@ public class DashCorrectionProtection
             }
         }
 
-        player.Die(direction, LongName1, LongName2);
         return true;
     }
 }

@@ -1,10 +1,11 @@
 using System;
+using Celeste.Mod.CaeruleaHelper.Entities;
 using Mono.Cecil;
 using Mono.Cecil.Cil;
 using Monocle;
 using MonoMod.Cil;
 
-namespace Celeste.Mod.CaeruleaHelper.Entities;
+namespace Celeste.Mod.CaeruleaHelper.Hooks;
 
 public class BerryHook
 {

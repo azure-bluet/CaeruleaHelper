@@ -6,7 +6,7 @@ using MonoMod.Cil;
 using MonoMod.RuntimeDetour;
 using MonoMod.Utils;
 
-namespace Celeste.Mod.CaeruleaHelper.Triggers;
+namespace Celeste.Mod.CaeruleaHelper.Hooks;
 
 public class DashSpeedHook
 {

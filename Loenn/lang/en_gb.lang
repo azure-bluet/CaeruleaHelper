@@ -55,6 +55,10 @@ triggers.CaeruleaHelper/AlwaysFailSuperTrigger.attributes.description.enable=Whe
 triggers.CaeruleaHelper/AlwaysFailSuperTrigger.attributes.description.revertOnLeave=Revert on leave
 triggers.CaeruleaHelper/AlwaysFailSuperTrigger.attributes.description.allowReverse=Allow reversed fail supers/hypers
 
+# Backdrop blur effect trigger
+triggers.CaeruleaHelper/BackdropBlurEffectTrigger.placements.name.trigger=Backdrop Blur Effect Trigger
+triggers.CaeruleaHelper/BackdropBlurEffectTrigger.attributes.description.blurTag=The tag for the styleground to be blured
+triggers.CaeruleaHelper/BackdropBlurEffectTrigger.attributes.description.strength=Blur strength
 
 # Always fail wallbounce trigger
 triggers.CaeruleaHelper/AlwaysFailWallbounceTrigger.placements.name.trigger=Always Fail Wallbounce Trigger

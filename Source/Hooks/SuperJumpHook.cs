@@ -5,7 +5,7 @@ using Mono.Cecil.Cil;
 using MonoMod.Cil;
 using MonoMod.RuntimeDetour;
 
-namespace Celeste.Mod.CaeruleaHelper.Triggers;
+namespace Celeste.Mod.CaeruleaHelper.Hooks;
 
 public class SuperJumpHook
 {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Celeste.Mod.CaeruleaHelper.Effects;
 using Celeste.Mod.CaeruleaHelper.Entities;
-using Celeste.Mod.CaeruleaHelper.Triggers;
+using Celeste.Mod.CaeruleaHelper.Hooks;
 using Monocle;
 
 namespace Celeste.Mod.CaeruleaHelper;
@@ -36,6 +36,7 @@ public class CaeruleaHelperModule : EverestModule {
         DashSpeedHook.Load();
         BerryHook.Load();
         BackdropLoader.Load();
+        BackdropRenderHook.Load();
         JumpSwitchFlag.Load();
         ToggleReverseBooster.Load();
         QuarterRotateBooster.Load();
@@ -49,6 +50,7 @@ public class CaeruleaHelperModule : EverestModule {
         SuperJumpHook.Unload();
         DashSpeedHook.Unload();
         BerryHook.Unload();
+        BackdropRenderHook.Unload();
         BackdropLoader.Unload();
         JumpSwitchFlag.Unload();
         ToggleReverseBooster.Unload();

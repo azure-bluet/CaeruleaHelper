@@ -67,6 +67,10 @@ Disable Super/Hyper Trigger: This trigger disables supers/hypers.
 No Dash Speed Reset Trigger: This trigger makes player preserve speed after horizontal
 and up-diagnal dashes.
 
+Backdrop Blur Effect Trigger: This trigger adds (or removes, of course) blur effects to
+specific stylegrounds. To use this trigger, fill in some tag, than add `caeruleaBlurEffect`
+and the tag you wrote to the styleground (in case you don't know, use comma to seperate).
+
 ### Backdrops
 
 Custom Ascending Stars: Provides random moving stars, like the ones in Final Goodbye
