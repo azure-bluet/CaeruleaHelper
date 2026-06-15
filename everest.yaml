@@ -1,6 +1,8 @@
 - Name: CaeruleaHelper
-  Version: 1.8.1
+  Version: 1.9.0
   DLL: bin/CaeruleaHelper.dll
   Dependencies:
     - Name: EverestCore
       Version: 1.5577.0
+  OptionalDependencies:
+    - Name: DashlessHelper

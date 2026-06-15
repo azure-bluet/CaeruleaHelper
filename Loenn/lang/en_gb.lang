@@ -41,6 +41,12 @@ entities.CaeruleaHelper/QuarterRotateBooster.attributes.name.red=Red
 entities.CaeruleaHelper/QuarterRotateBooster.attributes.name.degrees=Rotation (degrees)
 entities.CaeruleaHelper/QuarterRotateBooster.attributes.name.twistSprite=Twist Sprite
 
+# Custom star jump block
+entities.CaeruleaHelper/CustomStarJumpBlock.placements.name.custom_star_jump_block=Custom Star Jump Block
+entities.CaeruleaHelper/CustomStarJumpBlock.attributes.description.sinks=Whether the block sinks when the player stands on it
+entities.CaeruleaHelper/CustomStarJumpBlock.attributes.description.edges=Whether the block should have edge textures
+entities.CaeruleaHelper/CustomStarJumpBlock.attributes.description.railing=Whether the block should have railing textures
+
 # Invisible Spinner Controller
 entities.CaeruleaHelper/InvisibleSpinnerController.placements.name.invisible_spinner_controller=Invisible Spinner Controller
 

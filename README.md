@@ -29,6 +29,11 @@ The texture of the arrows indicators are from [GlassHelper](https://github.com/r
 
 Quarter Rotate Booster: Rotates player any degrees you want.
 
+Custom Star Jump Block: Star Jump Block, but you can customize it. Two options control
+whether there are edges or railing. Additionally, you can specify the textures of the
+edges and railing. A default edge texture `objects/caerulea/starjumpblock/` is provided
+as an almost blank texture.
+
 ### Controllers
 
 Invisible Spinner Controller: Place this so all your (vanilla) spinners in this room 

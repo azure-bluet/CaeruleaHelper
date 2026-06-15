@@ -40,6 +40,7 @@ public class CaeruleaHelperModule : EverestModule {
         JumpSwitchFlag.Load();
         ToggleReverseBooster.Load();
         QuarterRotateBooster.Load();
+        CustomStarJumpBlock.Load();
         InvisibleSpinnerController.Load();
         DashCorrectionProtection.Load();
     }
@@ -55,6 +56,7 @@ public class CaeruleaHelperModule : EverestModule {
         JumpSwitchFlag.Unload();
         ToggleReverseBooster.Unload();
         QuarterRotateBooster.Unload();
+        CustomStarJumpBlock.Unload();
         InvisibleSpinnerController.Unload();
         DashCorrectionProtection.Unload();
     }
