@@ -25,7 +25,7 @@ public class BackdropRenderHook
     }
     private static VirtualRenderTarget EnsureBuffer(VirtualRenderTarget buf, string name)
     {
-        if (buf == null) return VirtualContent.CreateRenderTarget(name, 320, 180);
+        if (buf == null) return VirtualContent.CreateRenderTarget(name, GameplayBuffers.Level.Width, GameplayBuffers.Level.Height);
         else return buf;
     }
     public static void Unload()
