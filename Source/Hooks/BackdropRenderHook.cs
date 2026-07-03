@@ -23,9 +23,18 @@ public class BackdropRenderHook
         mybuf = EnsureBuffer(mybuf, "caerulea_blur_buffer");
         temp = EnsureBuffer(temp, "caerulea_blur_temp");
     }
+    private static int GetWidth()
+    {
+        return GameplayBuffers.Level.Width;
+    }
+    private static int GetHeight()
+    {
+        return GameplayBuffers.Level.Height;
+    }
     private static VirtualRenderTarget EnsureBuffer(VirtualRenderTarget buf, string name)
     {
-        if (buf == null) return VirtualContent.CreateRenderTarget(name, GameplayBuffers.Level.Width, GameplayBuffers.Level.Height);
+        if (buf == null || buf.Width != GetWidth() || buf.Height != GetHeight())
+            return VirtualContent.CreateRenderTarget(name, GetWidth(), GetHeight());
         else return buf;
     }
     public static void Unload()
