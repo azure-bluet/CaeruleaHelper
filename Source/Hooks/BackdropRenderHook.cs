@@ -71,12 +71,11 @@ public class BackdropRenderHook
             cursor.MarkLabel(after);
         }
     }
-    private static readonly Dictionary<string, float> blurs = [];
     private static VirtualRenderTarget mybuf = null, temp = null;
     public static void AddBlur(string tag, float value)
     {
-        blurs.Remove(tag);
-        if (value > 1e-5)  blurs.Add(tag, value);
+        CaeruleaHelperModule.Session.BlurEffectValues.Remove(tag);
+        if (value > 1e-5) CaeruleaHelperModule.Session.BlurEffectValues.Add(tag, value);
     }
     private static bool ShouldBeTakenByCaerulea(Backdrop backdrop)
     {
@@ -92,7 +91,7 @@ public class BackdropRenderHook
         string tag = null;
         foreach (var t in backdrop.Tags)
         {
-            if (blurs.ContainsKey(t))
+            if (CaeruleaHelperModule.Session.BlurEffectValues.ContainsKey(t))
             {
                 tag = t;
                 // We assume there's only one tag, otherwise idk what to do anyways
@@ -104,7 +103,7 @@ public class BackdropRenderHook
             backdrop.Render(scene);
             return;
         }
-        blurs.TryGetValue(tag, out float strength);
+        CaeruleaHelperModule.Session.BlurEffectValues.TryGetValue(tag, out float strength);
         // We set the RT to our buffer
         renderer.EndSpritebatch();
         GraphicsDevice device = Engine.Graphics.GraphicsDevice;

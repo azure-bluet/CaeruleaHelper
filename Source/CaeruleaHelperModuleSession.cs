@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace Celeste.Mod.CaeruleaHelper;
 
 public class CaeruleaHelperModuleSession : EverestModuleSession
@@ -10,4 +12,5 @@ public class CaeruleaHelperModuleSession : EverestModuleSession
     public bool NoDashSpeedReset { get; set; } = false;
     public bool SetSpinnerInvisible { get; set; } = false;
     public bool SpikeCorrectionLeniency { get; set; } = false;
+    public Dictionary<string, float> BlurEffectValues { get; set; } = [];
 }
