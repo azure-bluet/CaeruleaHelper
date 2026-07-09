@@ -50,6 +50,9 @@ entities.CaeruleaHelper/CustomStarJumpBlock.attributes.description.railing=Wheth
 # Invisible Spinner Controller
 entities.CaeruleaHelper/InvisibleSpinnerController.placements.name.invisible_spinner_controller=Invisible Spinner Controller
 
+# Jelly Freezing Fix Controller
+entities.CaeruleaHelper/JellyFreezingFixController.placements.name.jelly_freezing_fix_controller=Jelly Freezing Fix Controller
+
 # Disable super trigger
 triggers.CaeruleaHelper/DisableSuperTrigger.placements.name.trigger=Disable Super/Hyper Trigger
 triggers.CaeruleaHelper/DisableSuperTrigger.attributes.description.enable=Whether enable or disable

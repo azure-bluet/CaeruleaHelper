@@ -41,6 +41,10 @@ become invisible. This will (unexpectedly) affect spinners in the following room
 they're being first loaded, so be careful. Note: I recommend using Set Spinner Invisible
 Trigger instead.
 
+Jelly Freezing Fix Controller: This fixes the vanilla bug for jellyfish (aka glider). In
+vanilla when you do holdable freezing to jellyfish and die (not retry), the game would encounter
+a critical error. If you place this controller, the bug is fixed.
+
 ### Triggers
 
 Always Fail Super/Hyper Trigger: This trigger lets player perform failed supers/hypers

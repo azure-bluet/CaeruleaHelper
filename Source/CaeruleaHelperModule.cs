@@ -32,6 +32,7 @@ public class CaeruleaHelperModule : EverestModule {
     public override void Load()
     {
         // TODO: apply any hooks that should always be active
+        ActorHook.Load();
         SuperJumpHook.Load();
         DashSpeedHook.Load();
         BerryHook.Load();
@@ -48,6 +49,7 @@ public class CaeruleaHelperModule : EverestModule {
     public override void Unload()
     {
         // TODO: unapply any hooks applied in Load()
+        ActorHook.Unload();
         SuperJumpHook.Unload();
         DashSpeedHook.Unload();
         BerryHook.Unload();
