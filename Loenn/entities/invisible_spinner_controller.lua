@@ -7,5 +7,6 @@ invisibleSpinnerController.placements = {
         data = {}
     }
 }
+invisibleSpinnerController.texture = "objects/caerulea/invisspinner/controller"
 
 return invisibleSpinnerController

@@ -2,7 +2,6 @@
 using Celeste.Mod.CaeruleaHelper.Effects;
 using Celeste.Mod.CaeruleaHelper.Entities;
 using Celeste.Mod.CaeruleaHelper.Hooks;
-using Monocle;
 
 namespace Celeste.Mod.CaeruleaHelper;
 
@@ -33,33 +32,35 @@ public class CaeruleaHelperModule : EverestModule {
     {
         // TODO: apply any hooks that should always be active
         ActorHook.Load();
-        SuperJumpHook.Load();
-        DashSpeedHook.Load();
-        BerryHook.Load();
         BackdropLoader.Load();
         BackdropRenderHook.Load();
-        JumpSwitchFlag.Load();
-        ToggleReverseBooster.Load();
-        QuarterRotateBooster.Load();
+        BerryHook.Load();
         CustomStarJumpBlock.Load();
-        InvisibleSpinnerController.Load();
         DashCorrectionProtection.Load();
+        DashSpeedHook.Load();
+        InvisibleSpinnerController.Load();
+        JumpSwitchFlag.Load();
+        NorthernLightsHook.Load();
+        QuarterRotateBooster.Load();
+        SuperJumpHook.Load();
+        ToggleReverseBooster.Load();
     }
 
     public override void Unload()
     {
         // TODO: unapply any hooks applied in Load()
         ActorHook.Unload();
-        SuperJumpHook.Unload();
-        DashSpeedHook.Unload();
-        BerryHook.Unload();
-        BackdropRenderHook.Unload();
         BackdropLoader.Unload();
-        JumpSwitchFlag.Unload();
-        ToggleReverseBooster.Unload();
-        QuarterRotateBooster.Unload();
+        BackdropRenderHook.Unload();
+        BerryHook.Unload();
         CustomStarJumpBlock.Unload();
-        InvisibleSpinnerController.Unload();
         DashCorrectionProtection.Unload();
+        DashSpeedHook.Unload();
+        InvisibleSpinnerController.Unload();
+        JumpSwitchFlag.Unload();
+        NorthernLightsHook.Unload();
+        QuarterRotateBooster.Unload();
+        SuperJumpHook.Unload();
+        ToggleReverseBooster.Unload();
     }
 }

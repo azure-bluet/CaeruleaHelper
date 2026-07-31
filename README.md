@@ -45,6 +45,16 @@ Jelly Freezing Fix Controller: This fixes the vanilla bug for jellyfish (aka gli
 vanilla when you do holdable freezing to jellyfish and die (not retry), the game would encounter
 a critical error. If you place this controller, the bug is fixed.
 
+Northern Lights Height Controller: Controls the height of northern lights. The controller has
+two options to indicate a range, which is [40, 90] by default (the value in vanilla). Note that
+this represents the Y coordinates on screen, so smaller values mean higher positions.
+
+Northern Lights Node Fix Controller: This fixes an issue in vanilla Celeste. Vanilla Northern Lights
+have imbalanced heights on different edges, which causes the height range on the right side is wider
+than the range on the left side. The controller changes the way the strands are created and let both
+sides become balanced. However, the height range on the edges are still wider than the range in the
+middle, but that's a relatively small problem.
+
 ### Triggers
 
 Always Fail Super/Hyper Trigger: This trigger lets player perform failed supers/hypers

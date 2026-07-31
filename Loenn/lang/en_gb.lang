@@ -47,11 +47,17 @@ entities.CaeruleaHelper/CustomStarJumpBlock.attributes.description.sinks=Whether
 entities.CaeruleaHelper/CustomStarJumpBlock.attributes.description.edges=Whether the block should have edge textures
 entities.CaeruleaHelper/CustomStarJumpBlock.attributes.description.railing=Whether the block should have railing textures
 
-# Invisible Spinner Controller
+# Invisible spinner controller
 entities.CaeruleaHelper/InvisibleSpinnerController.placements.name.invisible_spinner_controller=Invisible Spinner Controller
 
-# Jelly Freezing Fix Controller
+# Jelly freezing fix controller
 entities.CaeruleaHelper/JellyFreezingFixController.placements.name.jelly_freezing_fix_controller=Jelly Freezing Fix Controller
+
+# Northern lights height controller
+entities.CaeruleaHelper/NorthernLightsHeightController.placements.name.northern_lights_height_controller=Northern Lights Height Controller
+
+# Northern lights node fix controller
+entities.CaeruleaHelper/NorthernLightsNodeFixController.placements.name.northern_lights_node_fix_controller=Northern Lights Node Fix Controller
 
 # Disable super trigger
 triggers.CaeruleaHelper/DisableSuperTrigger.placements.name.trigger=Disable Super/Hyper Trigger
