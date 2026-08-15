@@ -33,10 +33,20 @@ public class ToggleReverseBooster : Booster
         Add(GreenSprite = GFX.SpriteBank.Create("booster"));
         if (this.red) sprite = RedSprite;
         else sprite = GreenSprite;
+        UpdateSprite();
     }
+    private void UpdateSprite()
+    {
+        if (CurrentState(SceneAs<Level>()) ^ initial) TwistSprite.Visible = true;
+        else TwistSprite.Visible = false;
+        RedSprite.Visible = red;
+        GreenSprite.Visible = !red;
+    }
+    // I don't know why it works perfectly
     public bool CurrentState(Level level)
     {
-        return global ? level.Session.GetFlag(ToggleReverseFlag) : current;
+        if (Engine.Scene as Level == null) return false;
+        return global ? (Engine.Scene as Level).Session.GetFlag(ToggleReverseFlag) : current;
     }
     private void Use(Player player)
     {
@@ -54,10 +64,7 @@ public class ToggleReverseBooster : Booster
     }
     public override void Update()
     {
-        if (CurrentState(SceneAs<Level>()) ^ initial) TwistSprite.Visible = true;
-        else TwistSprite.Visible = false;
-        RedSprite.Visible = red;
-        GreenSprite.Visible = !red;
+        UpdateSprite();
         base.Update();
     }
     public static void HookUse(On.Celeste.Booster.orig_PlayerBoosted orig, Booster self, Player player, Vector2 direction)
