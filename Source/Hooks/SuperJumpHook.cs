@@ -14,6 +14,7 @@ public class SuperJumpHook
     public static void Load()
     {
         On.Celeste.Player.SuperJump += SuperJump;
+        On.Celeste.Player.SuperWallJump += SuperWallJumpOnHook;
         IL.Celeste.Player.DashUpdate += ModifyPlayerDashIL;
         IL.Celeste.Player.RedDashUpdate += ModifyPlayerDashIL;
         IL.Celeste.Player.WallJumpCheck += ModifyWallJumpCheckIL;
@@ -25,6 +26,7 @@ public class SuperJumpHook
     public static void Unload()
     {
         On.Celeste.Player.SuperJump -= SuperJump;
+        On.Celeste.Player.SuperWallJump -= SuperWallJumpOnHook;
         IL.Celeste.Player.DashUpdate -= ModifyPlayerDashIL;
         IL.Celeste.Player.RedDashUpdate -= ModifyPlayerDashIL;
         IL.Celeste.Player.WallJumpCheck -= ModifyWallJumpCheckIL;
@@ -83,5 +85,16 @@ public class SuperJumpHook
         cursor.GotoNext(MoveType.After, instr => instr.MatchLdfld<Vector2>("Y"));
         cursor.Emit(OpCodes.Ldarg_0);
         cursor.EmitDelegate(CheckWallBouncable);
+    }
+    public static void SuperWallJumpOnHook(On.Celeste.Player.orig_SuperWallJump orig, Player self, int dir)
+    {
+        bool down = self.DashDir.Y > 0;
+        orig(self, dir);
+        if (down)
+        {
+            self.Speed.X *= CaeruleaHelperModule.Session.DowndashWallbounceHorizontalSpeedMultiplier;
+            self.Speed.Y *= CaeruleaHelperModule.Session.DowndashWallbounceVerticalSpeedMultiplier;
+            self.varJumpTimer *= CaeruleaHelperModule.Session.DowndashWallbounceJumpTimerMultiplier;
+        }
     }
 }

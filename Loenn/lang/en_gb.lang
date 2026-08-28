@@ -84,6 +84,9 @@ triggers.CaeruleaHelper/AlwaysFailWallbounceTrigger.attributes.description.rever
 triggers.CaeruleaHelper/DowndashWallbounceTrigger.placements.name.trigger=Downdash Wallbounce Trigger
 triggers.CaeruleaHelper/DowndashWallbounceTrigger.attributes.description.enable=Whether enable or disable
 triggers.CaeruleaHelper/DowndashWallbounceTrigger.attributes.description.revertOnLeave=Revert on leave
+triggers.CaeruleaHelper/DowndashWallbounceTrigger.attributes.description.horizontalSpeedMultiplier=The value multiplied to player's horizontal speed when doing a downdash wallbounce
+triggers.CaeruleaHelper/DowndashWallbounceTrigger.attributes.description.verticalSpeedMultiplier=The value multiplied to player's vertical speed when doing a downdash wallbounce
+triggers.CaeruleaHelper/DowndashWallbounceTrigger.attributes.description.jumpTimerMultiplier=The value multiplied to player's jump timer when doing a downdash wallbounce
 
 # Set spinner invisible trigger
 triggers.CaeruleaHelper/SetSpinnerInvisibleTrigger.placements.name.trigger=Set Spinner Invisible Trigger
